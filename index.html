@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Le Reve - Join the Future of Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --grey: #f8f8f8;
+            --dark-grey: #666666;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--white); color: var(--black); line-height: 1.6; }
+
+        /* --- Navigation --- */
+        nav {
+            padding: 10px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo-img {
+            height: 50px; /* Scaled for navbar */
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            max-width: 600px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            border: 1px solid var(--black);
+            cursor: pointer;
+        }
+
+        .btn:hover { background: transparent; color: var(--black); }
+        .btn-white { background: var(--white); color: var(--black); border-color: var(--white); }
+        .btn-white:hover { background: transparent; color: var(--white); }
+
+        /* --- Content --- */
+        section { padding: 100px 5%; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h2 { font-size: clamp(2rem, 5vw, 2.5rem); text-transform: uppercase; text-align: center; margin-bottom: 60px; letter-spacing: 3px; }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .job-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            padding: 45px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .job-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: var(--black); }
+
+        .remote-badge { background: #f0f0f0; padding: 6px 15px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+        .salary { color: var(--dark-grey); font-weight: 600; display: block; margin-bottom: 25px; font-size: 1.1rem; }
+
+        footer { background: var(--black); color: var(--white); padding: 60px 5%; text-align: center; }
+        footer .logo-img { filter: brightness(0) invert(1); height: 40px; margin-bottom: 20px; }
+
+        @media (max-width: 768px) { section { padding: 70px 20px; } .hero { height: 80vh; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="lereve.png" alt="Le Reve Logo" class="logo-img">
+    </nav>
+
+    <header class="hero">
+        <h1>Future of Fashion</h1>
+        <p>Innovation meets style. Work with Bangladesh's leading fashion house from anywhere.</p>
+        <a href="#openings" class="btn btn-white">Join the Team</a>
+    </header>
+
+    <section id="openings">
+        <div class="container">
+            <h2>Remote Positions</h2>
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div>
+                        <span class="remote-badge">100% Remote</span>
+                        <h3>Data Entry Operator</h3>
+                        <span class="salary">৳16,000 – ৳20,000</span>
+                        <p>Manage digital inventories and catalog updates for our global e-commerce store.</p>
+                    </div>
+                    <a href="form.html" class="btn" style="margin-top: 30px;">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <div>
+                        <span class="remote-badge">100% Remote</span>
+                        <h3>Customer Support</h3>
+                        <span class="salary">৳18,000 – ৳25,000</span>
+                        <p>Provide premium assistance to our global community across multiple digital channels.</p>
+                    </div>
+                    <a href="form.html" class="btn" style="margin-top: 30px;">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="lereve.png" alt="Le Reve Logo" class="logo-img">
+        <p>Fashion. Lifestyle. Innovation.</p>
+        <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.5;">&copy; 2026 lerevecraze.com | Bangladesh</p>
+    </footer>
+
+</body>
+</html>
